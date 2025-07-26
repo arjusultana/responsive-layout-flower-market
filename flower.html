@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Flower Market</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+@keyframes spin-slow {
+  to { transform: rotate(360deg); }
+}
+.spin-slow {
+  animation: spin-slow 8s linear infinite;
+}
+ body {
+    font-family: 'Noto Serif', serif;
+  }
+</style>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        fontFamily: {
+          noto: ['"Noto Serif"', 'serif'],
+        },
+      },
+    },
+  }
+</script>
+
+
+</head>
+
+<body class="font-sans text-gray-800 overflow-x-hidden">
+
+
+
+
+  <!-- Navbar -->
+  <nav class="flex justify-between items-center px-6 py-4 bg-white shadow-md">
+    <div class="flex items-center">
+      <img src="assets/logo.png" alt="Logo" class="h-20 w-24 mr-2"/>
+    </div>
+
+    <div class="hidden md:flex gap-6 items-center">
+      <a href="#" class="hover:underline text-black">Home</a>
+      <a href="#" class="hover:underline text-gray-500">Shop</a>
+      <a href="#" class="hover:underline text-gray-500">About Us</a>
+      <a href="#" class="flex items-center gap-1 text-base font-normal text-black hover:text-orange-600 transition-colors">
+  <i class="fa-solid fa-cart-shopping text-black text-xl"></i>
+  <span>Cart ($56)</span>
+</a>
+
+    </div>
+<div class="flex md:hidden items-center">
+  <i class="fa-solid fa-cart-shopping text-black text-xl mr-1"></i>
+  <span class="text-base text-black">Cart</span>
+</div>
+</nav>
+
+  <!-- Hero Section -->
+  <section class="flex flex-col-reverse md:flex-row items-center px-6 py-12 gap-8 bg-white">
+    <div class="md:w-1/2 text-center md:text-left">
+      <h1 class="font-noto text-4xl font-bold mb-4">
+      <span class="text-orange-500">Bring Nature</span> 
+      <span class="text-black">to Your</span> 
+      <span class="text-orange-500">Home</span>
+    </h1>
+
+    <p class="text-gray-600 mb-8 max-w-3xl mx-auto">
+      Discover a stunning selection of vibrant,
+      fresh indoor plants, handpicked and nurtured
+      to brighten your home and uplift your spirit.
+    </p>
+  </div>
+    </div>
+    <div class="md:w-1/2">
+      <img src="assets/hero-flower.png" alt="Banner Image" class="w-full rounded-lg"/>
+    </div>
+  </section>
+
+  <!-- Plants Section -->
+  <section class="text-center py-12 px-6 bg-white">
+     <h2 class="font-noto text-3xl font-bold mb-4">
+      <span class="text-orange-500">Our</span> <span class="text-black">Plants</span>
+    </h2>
+    <p class="text-gray-600 mb-8 max-w-3xl mx-auto">
+    Choose from our carefully curated selection of vibrant and healthy plants, perfect for brightening your home or office.
+  </p>
+
+  <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-6xl mx-auto">
+    
+      <div class="p-4 text-center">
+        <img src="assets/sample-flower-image.png" alt="Plant" class="w-full h-auto object-contain rounded mb-2" />
+        <h3 class="font-semibold text-lg">Lilly-blossom</h3>
+        <p class="text-sm font-bold text-black mb-3">$10.00</p>
+        <button onclick="addToCart()" class="w-full bg-orange-500 text-white py-2 rounded hover:bg-orange-600 transition">
+          Add to Cart
+        </button>
+      </div>
+     <div class="p-4 text-center">
+        <img src="assets/sample-flower-image.png" alt="Plant" class="w-full h-auto object-contain rounded mb-2" />
+        <h3 class="font-semibold text-lg">Lilly-blossom</h3>
+        <p class="text-sm font-bold text-black mb-3">$10.00</p>
+        <button onclick="addToCart()" class="w-full bg-orange-500 text-white py-2 rounded hover:bg-orange-600 transition">
+          Add to Cart
+        </button>
+      </div>
+       <div class="p-4 text-center">
+        <img src="assets/sample-flower-image.png" alt="Plant" class="w-full h-auto object-contain rounded mb-2" />
+        <h3 class="font-semibold text-lg">Lilly-blossom</h3>
+        <p class="text-sm font-bold text-black mb-3">$10.00</p>
+        <button onclick="addToCart()" class="w-full bg-orange-500 text-white py-2 rounded hover:bg-orange-600 transition">
+          Add to Cart
+        </button>
+      </div>
+       <div class="p-4 text-center">
+        <img src="assets/sample-flower-image.png" alt="Plant" class="w-full h-auto object-contain rounded mb-2" />
+        <h3 class="font-semibold text-lg">Lilly-blossom</h3>
+        <p class="text-sm font-bold text-black mb-3">$10.00</p>
+        <button onclick="addToCart()" class="w-full bg-orange-500 text-white py-2 rounded hover:bg-orange-600 transition">
+          Add to Cart
+        </button>
+      </div>
+     <div class="p-4 text-center">
+        <img src="assets/sample-flower-image.png" alt="Plant" class="w-full h-auto object-contain rounded mb-2" />
+        <h3 class="font-semibold text-lg">Lilly-blossom</h3>
+        <p class="text-sm font-bold text-black mb-3">$10.00</p>
+        <button onclick="addToCart()" class="w-full bg-orange-500 text-white py-2 rounded hover:bg-orange-600 transition">
+          Add to Cart
+        </button>
+      </div>
+    <div class="p-4 text-center">
+        <img src="assets/sample-flower-image.png" alt="Plant" class="w-full h-auto object-contain rounded mb-2" />
+        <h3 class="font-semibold text-lg">Lilly-blossom</h3>
+        <p class="text-sm font-bold text-black mb-3">$10.00</p>
+        <button onclick="addToCart()" class="w-full bg-orange-500 text-white py-2 rounded hover:bg-orange-600 transition">
+          Add to Cart
+        </button>
+      </div>
+       <div class="p-4 text-center">
+        <img src="assets/sample-flower-image.png" alt="Plant" class="w-full h-auto object-contain rounded mb-2" />
+        <h3 class="font-semibold text-lg">Lilly-blossom</h3>
+        <p class="text-sm font-bold text-black mb-3">$10.00</p>
+        <button onclick="addToCart()" class="w-full bg-orange-500 text-white py-2 rounded hover:bg-orange-600 transition">
+          Add to Cart
+        </button>
+      </div>
+      <div class="p-4 text-center">
+        <img src="assets/sample-flower-image.png" alt="Plant" class="w-full h-auto object-contain rounded mb-2" />
+        <h3 class="font-semibold text-lg">Lilly-blossom</h3>
+        <p class="text-sm font-bold text-black mb-3">$10.00</p>
+        <button onclick="addToCart()" class="w-full bg-orange-500 text-white py-2 rounded hover:bg-orange-600 transition">
+          Add to Cart
+        </button>
+      </div>
+      
+    </div>
+  </section>
+
+  <!-- Why Trust Us Section -->
+  <section class="flex flex-col md:flex-row items-center px-6 py-12 bg-white gap-8 relative">
+    <div class="md:w-1/2 relative">
+      <img src="assets/flower-store.png" alt="Plant Lover" class="rounded-lg w-full"/>
+    <img src="assets/trusted-badge.png" alt="Trusted Badge" class="hidden md:block absolute -top-20 -right-20 w-60 h-60 spin-slow"/>
+
+
+
+
+    </div>
+
+    <div class="md:w-1/2">
+      <h2 class="font-noto text-3xl font-bold mb-4">Why Plant Lovers Trust Us</h2>
+         <ul class="list-disc list-inside space-y-2 text-gray-700 font-sans">
+        <li>Premium, handpicked plants nurtured with care</li>
+        <li>Sustainable, eco-friendly packaging for a greener planet</li>
+        <li>Reliable doorstep delivery, bringing nature right to your door</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Deals Section -->
+  <section class="px-6 py-16 bg-gray-50">
+    <div class="text-center mb-10">
+     <h2 class="font-noto text-3xl font-bold">
+        <span class="text-black">Don’t Miss Our</span> 
+        <span class="text-orange-500">Latest </span>
+        <span class="text-black">Offers</span>
+      </h2>
+   <p class="text-gray-500 mt-2 text-sm font-sans max-w-xl mx-auto">
+       Enjoy incredible savings on your favorite plants and bring home the beauty of nature for less.
+      </p>
+    </div>
+
+    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="flex flex-col gap-6 md:col-span-1">
+        <div class="relative h-52 md:h-[13rem] rounded-lg overflow-hidden">
+          <div class="absolute inset-0 bg-[url('assets/deal-bloom.png')] bg-cover bg-center"></div>
+          <div class="absolute inset-0 bg-black bg-opacity-40 flex flex-col items-center justify-center text-white text-center px-4">
+              <h3 class="text-2xl font-noto mb-2">60% OFF | Bloom Plant</h3>
+            <a href="#" class="underline text-lg hover:text-orange-400 transition">Shop Now</a>
+          </div>
+        </div>
+        <div class="relative h-52 md:h-[13rem] rounded-lg overflow-hidden">
+          <div class="absolute inset-0 bg-[url('assets/deal-ana.png')] bg-cover bg-center"></div>
+          <div class="absolute inset-0 bg-black bg-opacity-40 flex flex-col items-center justify-center text-white text-center px-4">
+                <h3 class="text-2xl font-noto mb-2">30% OFF | Ana Plant</h3>
+            <a href="#" class="underline text-lg hover:text-orange-400 transition">Shop Now</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="relative h-52 md:h-[26rem] md:col-span-2 rounded-lg overflow-hidden">
+        <div class="absolute inset-0 bg-[url('assets/deal-zabo.png')] bg-cover bg-center"></div>
+        <div class="absolute inset-0 bg-black bg-opacity-40 flex flex-col items-center justify-center text-white text-center px-4">
+           <h3 class="text-3xl font-noto mb-3">25% OFF | Zabo Plant</h3>
+          <a href="#" class="underline text-lg hover:text-orange-400 transition">Shop Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Newsletter Section -->
+  <section class="bg-cover bg-center py-20 px-6 text-white" style="background-image: url('assets/news-letter-bg.png');">
+    <div class="max-w-2xl mx-auto text-center p-6">
+       <h2 class="font-noto text-3xl font-bold mb-4">Join the colorful Bunch</h2>
+       <p class="text-gray-300 mt-2 text-sm font-sans">
+       Subscribe to our newsletter and be the first to get exclusive deals, tips for plant care, and inspiring ideas to nurture your indoor garden.
+      </p>
+      <form class="flex flex-row items-center justify-center mt-6 font-sans">
+        <input type="email" placeholder="Enter your email" required class="px-4 py-2 text-black w-full border-none focus:outline-none"  />
+        <button type="submit" class="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 transition">Subscribe</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-white py-12 px-6">
+  <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 items-start">
+      
+    <div>
+        <div class="flex items-center gap-2 mb-4">
+          <img src="assets/logo.png" alt="Logo" class="h-20 w-24">
+        </div>
+         <p class="text-gray-500 max-w-xs font-sans">
+          Indulge your senses with the beauty and fragrance of our fresh flower shop.
+        </p>
+      </div>
+
+
+<div class="flex flex-col md:flex-row gap-2 md:gap-6 text-gray-500 text-sm font-sans">
+ 
+  <div class="flex flex-col gap-2 text-gray-500 text-sm font-sans">
+    <a href="#" class="hover:underline">Home</a>
+    <a href="#" class="hover:underline">About Us</a>
+    <a href="#" class="hover:underline">Blog</a>
+    <a href="#" class="hover:underline">FAQ</a>
+    <a href="#" class="hover:underline">Contact Us</a>
+  </div>
+
+   <div class="flex flex-col gap-2 text-gray-500 text-sm font-sans">
+    <a href="#" class="hover:underline">Features</a>
+    <a href="#" class="hover:underline">Pricing</a>
+    <a href="#" class="hover:underline">Privacy Policy</a>
+    <a href="#" class="hover:underline">Terms of Service</a>
+    <a href="#" class="hover:underline">Help Center</a>
+  </div>
+
+</div>
+
+
+
+
+      <div class="flex gap-4 items-start">
+        <img src="assets/icon-linkedin.png" alt="LinkedIn" class="h-6 w-6 hover:scale-110 transition">
+        <img src="assets/icon-twitter.png" alt="Twitter" class="h-6 w-6 hover:scale-110 transition">
+        <img src="assets/icon-facebook.png" alt="Facebook" class="h-6 w-6 hover:scale-110 transition">
+        <img src="assets/icon-youtube.png" alt="YouTube" class="h-6 w-6 hover:scale-110 transition">
+      </div>
+    </div>
+  </footer>
+  <script>
+  function addToCart() {
+    alert("Flower Added to Cart");
+  }
+</script>
+
+
+</body>
+</html>
+
+
